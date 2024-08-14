@@ -1,0 +1,122 @@
+@use "fonts" as *;
+@use "variables" as *;
+@use "media" as *;
+
+html {
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  background-color: $white;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 70px;
+  margin: 0 auto;
+
+  @include laptop {
+    padding: 0 42px;
+  }
+
+  // @include tablet {
+  //   padding: 0 42px;
+  // }
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  inset: 0;
+  background-color: rgba($color: black, $alpha: .7);
+  z-index: 100;
+
+  &_close-btn {
+    position: fixed;
+    color: #fff;
+    top: 28px;
+    right: 48px;
+    font-size: 78px;
+    line-height: .7;
+    cursor: pointer;
+  }
+}

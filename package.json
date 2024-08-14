@@ -1,0 +1,21 @@
+{
+  "name": "cup-time-dev",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "globals": "^15.9.0",
+    "sass": "^1.77.8",
+    "sharp": "^0.33.4",
+    "vite": "^5.3.4",
+    "vite-plugin-image-optimizer": "^1.1.8"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
